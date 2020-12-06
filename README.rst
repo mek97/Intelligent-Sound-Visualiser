@@ -2,7 +2,7 @@
 Intelligent Music Visualizer
 ****************************
 
-Intelligent music visualiser, generating ML based animations based on audio inputs.
+Intelligent music visualiser, generating ML based animations from audio inputs.
 
 .. contents:: **Table of contents**
 
