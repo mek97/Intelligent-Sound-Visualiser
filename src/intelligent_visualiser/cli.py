@@ -38,7 +38,7 @@ def main():
     load_data_parser.add_argument('--template', default="SPIRAL", help="Animation template")
     load_data_parser.add_argument('--music_file',
                                   default=str(default_output_dir.joinpath("audio_data").joinpath("sample.wav")),
-                                  help="Music file input path")
+                                  help="Music file input path in wav format")
 
     load_data_parser.add_argument('--speed', type=int, default=0.005, help="Animation speed")
 

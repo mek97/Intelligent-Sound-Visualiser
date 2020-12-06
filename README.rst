@@ -2,17 +2,18 @@
 Intelligent Music Visualizer
 ****************************
 
-An intelligent music visualiser, generating animations based on audio inputs.
+Intelligent music visualiser, generating ML based animations based on audio inputs.
 
 .. contents:: **Table of contents**
 
 Features
 ~~~~~~~~
 
-* Generates animation based on audio beats
-* Support real time input
-* Support audio input from a file
-* [WIP] Varying animations based on lyrics and sentiment analysis
+* Real time audio input support
+* Audio input from a file support
+* Live plot support
+* Saving animation output support
+* [WIP] Varying animations based on beats, lyrics and sentiment analysis
 
 Requirements
 ~~~~~~~~~~~~
@@ -78,28 +79,29 @@ Examples Commands
     :align: center
 
 
-Output in ``~/intelligent_visualiser/animation_output.mp4``
+Output in ``${INTELLIGENT_VISUALIZER_OUT}/animation_output.mp4``
 
 2. Plot animation from live audio input
 ---------------------------------------
 
 .. code-block:: console
 
-    $ intelligent_visualiser --duration=5 live_input --duration=5
+    $ intelligent_visualiser --duration=5 live_input
 
 
-3. Save animation from audio data from a file
+3. Save animation from audio data file
 ---------------------------------------------
 
 .. code-block:: console
 
-    $ intelligent_visualiser --save --duration=5 data_input --music_file FILE_PATH
+    $ intelligent_visualiser --save --duration=5 data_input --music_file MUSIC_FILE_PATH
 
+Default music input path is ``${INTELLIGENT_VISUALIZER_OUT}/songs/sample.wav``
 
 
 TODOs
 ~~~~~
 
-* Lyrics engine
-* Sentiment analytics
+* Lyrics feed engine
+* Sentiment analysis
 * Documentation
