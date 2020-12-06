@@ -5,8 +5,8 @@ from pathlib import Path
 from intelligent_visualiser.core.audio.audio_data import AudioData
 from intelligent_visualiser.core.audio.audio_stream import AudioStream
 from intelligent_visualiser.core.mixer.mixer import Mixer
-from intelligent_visualiser.core.video_profile.live_polar_animator import LivePolarAnimator
-from intelligent_visualiser.core.video_profile.polar_animator import PolarAnimator
+from intelligent_visualiser.core.video.live_polar_animator import LivePolarAnimator
+from intelligent_visualiser.core.video.polar_animator import PolarAnimator
 from intelligent_visualiser.utils.config_utils import ConfigUtils
 from intelligent_visualiser.utils.constants import PolarAnimationTypes
 
@@ -15,18 +15,18 @@ def main():
     default_output_dir = Path(ConfigUtils.get_output_directory())
     parser = argparse.ArgumentParser(description='CLI for Intelligent Music visualizer')
     parser.add_argument('--log_level', default=logging.INFO, type=int, help="Logging level")
-    parser.add_argument('--duration', type=int, default=5, help="Duration")
+    parser.add_argument('--duration', type=int, default=5, help="Duration in seconds")
     parser.add_argument('--fps', type=int, default=40, help="FPS")
     parser.add_argument('--save', action='store_true', help="Save animation")
     parser.add_argument('--speed', type=int, default=0.005, help="Animation speed")
     parser.add_argument('--video_file', default=str(default_output_dir.joinpath("video_output.mp4")),
-                        help="Video file output path")
+                        help="Animation file output path")
     parser.add_argument('--output_file', default=str(default_output_dir.joinpath("animation_output.mp4")),
-                        help="Video file output path")
+                        help="Video only file output path")
 
     subparsers = parser.add_subparsers(title='Modes', dest='mode', required=True)
 
-    live_input_parser = subparsers.add_parser('live_input', help='Live input mode')
+    live_input_parser = subparsers.add_parser('live_input', help='Record audio  data and process it')
     live_input_parser.add_argument('--template', default=PolarAnimationTypes.SPIRAL, help="Animation template")
 
     live_input_parser.add_argument('--record_audio_file', default=str(default_output_dir.joinpath("audio_output.wav")),

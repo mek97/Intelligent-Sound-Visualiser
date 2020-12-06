@@ -1,7 +1,7 @@
 import queue
 
 import numpy as np
-from intelligent_visualiser.core.video_profile.base_polar_animator import BasePolarAnimator
+from intelligent_visualiser.core.video.base_polar_animator import BasePolarAnimator
 from intelligent_visualiser.utils.constants import PolarAnimationTypes
 
 

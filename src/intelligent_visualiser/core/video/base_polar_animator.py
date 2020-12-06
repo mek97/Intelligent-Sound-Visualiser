@@ -1,4 +1,4 @@
-from intelligent_visualiser.core.video_profile.base_animator import BaseAnimator
+from intelligent_visualiser.core.video.base_animator import BaseAnimator
 from matplotlib import animation
 from matplotlib import pyplot as plt
 
