@@ -40,7 +40,7 @@ class AudioStream(threading.Thread):
                 if self.record:
                     file.write(indata)
 
-            with sd.InputStream(callback=audio_callback) as stream:
+            with sd.InputStream(callback=audio_callback) as stream:  # noqa: F841
                 sd.sleep(self.duration * 1000)
 
         finally:

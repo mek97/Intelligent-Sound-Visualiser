@@ -8,3 +8,11 @@ include LICENSE.txt
 
 # Include the data files
 recursive-include src *.py
+
+# Exclude data files
+recursive-exclude tests *
+recursive-exclude images *.png
+recursive-exclude docs *
+recursive-exclude docsrc *
+recursive-exclude media *
+recursive-exclude visualizer_old *

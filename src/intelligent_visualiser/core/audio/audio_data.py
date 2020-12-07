@@ -56,5 +56,3 @@ class AudioData:
             end = self.duration
 
         return self.audio_data[int(self.samplerate * start): int(self.samplerate * end)]
-
-

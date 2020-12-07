@@ -9,11 +9,11 @@ Intelligent music visualiser, generating ML based animations from audio inputs.
 Features
 ~~~~~~~~
 
+* Varying animations based on beats analysis
 * Real time audio input support
 * Audio input from a file support
-* Live plot support
+* Real time animation output support
 * Saving animation output support
-* [WIP] Varying animations based on beats, lyrics and sentiment analysis
 
 Requirements
 ~~~~~~~~~~~~
@@ -62,6 +62,7 @@ Usage
 
 * NOTE: make sure directory ``~/intelligent_visualiser`` is not reserved. To override default, specify directory in environment var ``INTELLIGENT_VISUALIZER_OUT``
 
+
 Examples Commands
 ~~~~~~~~~~~~~~~~~
 
@@ -102,6 +103,6 @@ Default music input path is ``${INTELLIGENT_VISUALIZER_OUT}/songs/sample.wav``
 TODOs
 ~~~~~
 
-* Lyrics feed engine
-* Sentiment analysis
+* Lyrics NLP engine
+* Animation enhancements
 * Documentation
